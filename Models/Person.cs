@@ -7,6 +7,7 @@ namespace dotNetDependencyInjection.Models
     {
         public ICollection<PersonGroup>? PersonGroups { get; set; } //kolekcja pośrednicząca
 
+        public bool IsActive { get; set; }
 
         public int Id { get; set; }
 
