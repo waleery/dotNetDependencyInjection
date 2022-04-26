@@ -1,4 +1,8 @@
+using dotNetDependencyInjection;
 using dotNetDependencyInjection.Data;
+using dotNetDependencyInjection.Interfaces;
+using dotNetDependencyInjection.Repositories;
+using dotNetDependencyInjection.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<PeopleContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DependencyInjectionV1")));
+
+builder.Services.AddProjectService();
+
+
 
 var app = builder.Build();
 
