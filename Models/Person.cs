@@ -15,6 +15,11 @@ namespace dotNetDependencyInjection.Models
         [Required]
         [MaxLength(100)]
         public string LastName { get; set; }
+
+        public virtual ICollection<Address>? Addresses
+        {
+            get; set;
+        }
     }
 
 }
