@@ -1,8 +1,8 @@
 ﻿namespace dotNetDependencyInjection.ViewModels.Person
 {
-    public class PersonForListVm
+    public class ListPersonForListVM
     {
-        public int Id { get; set; }
-        public string FullName { get; set; }
+        public List<PersonForListVM> People { get; set; }
+        public int Count { get; set; }
     }
 }
